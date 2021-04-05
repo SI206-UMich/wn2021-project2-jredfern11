@@ -118,7 +118,7 @@ def summarize_best_books(filepath):
     urltag = soup.find_all('a', class_= 'category_copy')
 
     for i in range(20):
-        tups.append(categories[i], titles[i], urls[i])
+        tups.append((categories[i], titles[i], urls[i]))
     return tups
 
 
@@ -214,7 +214,7 @@ class TestCases(unittest.TestCase):
 
     def test_summarize_best_books(self):
         # call summarize_best_books and save it to a variable
-        best_summaries = summarize_best_books("/Users/johnredfern/Dropbox/My Mac (John’s MacBook Pro)/Downloads/SI 206/wn2021-project2-jredfern11/Project2.py")
+        best_summaries = summarize_best_books("/Users/johnredfern/Dropbox/My Mac (John’s MacBook Pro)/Downloads/SI 206/wn2021-project2-jredfern11")
         # check that we have the right number of best books (20)
         self.assertEqual(len(best_summaries), 20)
             # assert each item in the list of best books is a tuple
