@@ -216,7 +216,7 @@ class TestCases(unittest.TestCase):
 
     def test_summarize_best_books(self):
         # call summarize_best_books and save it to a variable
-        sums = summarize_best_books("/Users/johnredfern/Dropbox/My Mac (John’s MacBook Pro)/Downloads/SI 206/wn2021-project2-jredfern11/Project2.py")
+        sums = summarize_best_books("/Users/johnredfern/Downloads/SI 206/wn2021-project2-jredfern11/best_books_2020.htm")
         # check that we have the right number of best books (20)
         self.assertEqual(len(sums), 20)
             # assert each item in the list of best books is a tuple
